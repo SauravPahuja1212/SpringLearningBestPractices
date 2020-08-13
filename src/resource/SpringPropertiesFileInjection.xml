@@ -1,0 +1,15 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="resource/vehicle.properties"></property>
+   </bean>
+   
+   <bean id="propertiesFile" class="com.springLearning.propertiesFileInjection.PropertiesFileInjection">
+		<property name="brand" value="${brand}" />
+		<property name="model" value="${model}" />
+		<property name="year" value="${year}" />
+   </bean>
+</beans>
