@@ -13,6 +13,7 @@ public class AutoWiredExample {
 		
 		vehicle.getDetails();
 		
+		//Closing the context to save any leak
 		context.close();
 	}
 }
